@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
   def create
-    render :text => request.env['rack.auth'].inspect
+    render :text => "Hello, #{request.env['rack.auth']['user_info']['nickname']}"
   end
 end
