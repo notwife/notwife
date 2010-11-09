@@ -1,0 +1,9 @@
+development: &local
+  twitter:
+    consumer_key: twitter_consumer_key
+    consumer_secret:  twitter_consumer_secret
+
+production:
+
+test:
+  <<: *local

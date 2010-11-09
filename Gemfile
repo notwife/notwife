@@ -25,6 +25,7 @@ gem 'haml'
 gem 'haml-rails'
 gem 'jquery-rails'
 
+gem 'configatron'
 gem 'omniauth'
 
 # Bundle gems for the local environment. Make sure to
