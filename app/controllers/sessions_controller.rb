@@ -1,5 +1,11 @@
 class SessionsController < ApplicationController
   def create
-    render :text => "Hello, #{request.env['rack.auth']['user_info']['nickname']}"
+    auth = request.env['rack.auth']
+    unless @auth = Authorization.find_from_hash(auth)
+      @auth = Authorization.create_from_hash(auth, current_user)
+    end
+    self.current_user = @auth.user
+
+    render :text => "Welcome, #{current_user.screen_name}"
   end
 end
