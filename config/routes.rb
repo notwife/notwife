@@ -4,6 +4,9 @@ Notwife::Application.routes.draw do
 
   match '/auth/:provider/callback', :to => 'sessions#create'
 
+  match '/',          :to => 'common#top'
+  match '/dashboard', :to => 'common#dashboard'
+
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

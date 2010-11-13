@@ -6,6 +6,6 @@ class SessionsController < ApplicationController
     end
     self.current_user = @auth.user
 
-    render :text => "Welcome, #{current_user.screen_name}"
+    redirect_to :controller => 'common', :action => 'dashboard'
   end
 end

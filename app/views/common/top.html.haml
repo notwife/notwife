@@ -1,0 +1,6 @@
+%div top
+%div
+  - if @user
+    @user.screen_name
+  -else
+    %a{ :href => '/auth/twitter', :title => 'Sign in with Twitter' } Sign in with Twitter
