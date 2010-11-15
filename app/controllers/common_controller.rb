@@ -1,6 +1,6 @@
 class CommonController < ApplicationController
   def top
-    @title = "Notwife is not your wife"
+    @title = "Notwife is not your wife."
     @user  = current_user
   end
 

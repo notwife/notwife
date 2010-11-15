@@ -1,9 +1,22 @@
 !!! 5
-%html
+%html{ :lang => "ja" }
   %head
     %title= @title
-    = stylesheet_link_tag(:all)
+    %meta{ :charset => "UTF-8" }
+    = stylesheet_link_tag 'notwife'
     = javascript_include_tag(:defaults)
     = csrf_meta_tag
   %body
-    = yield
+    %div#wrapper
+      %div#header
+        %h1
+          = link_to("Notwife", { :controller => "common", :action => "top" }, { :title => "Notwife" })
+          %span is not your wife.
+      %div#main
+        = yield
+      %div#footer
+        %p#credit
+          = "Powered by Ruby %s and Rails %s, Made by" % [RUBY_VERSION, Rails::VERSION::STRING]
+          %a{ :href => "http://twitter.com/kei_s",  :title => "kei-s (kei_s) on Twitter" }  @kei_s
+          and
+          %a{ :href => "http://twitter.com/june29", :title => "Jun OHWADA (june29) on Twitter" } @june29
