@@ -1,6 +1,7 @@
 - if @user
+  - name = @user.twitter_screen_name
   Hi, @
-  %a{ :href => 'http://twitter.com/' + @user.screen_name, :title => 'Twitter / ' + @user.screen_name }><= @user.screen_name
+  %a{ :href => 'http://twitter.com/' + name, :title => 'Twitter / ' + name }><= name
   \! Please check your
   - succeed("!") do
     != link_to('Dashbaord', { :controller => 'common', :action => 'dashboard' }, { :title => 'Dashboard' })

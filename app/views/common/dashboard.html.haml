@@ -1,2 +1,11 @@
-Signed in as @
-%a{ :href => "http://twitter.com/" + @user.screen_name, :title => "Twitter / " + @user.screen_name }><= @user.screen_name
+- name = @user.twitter_screen_name
+%h3
+  Edit @
+  %a{ :href => "http://twitter.com/" + name, :title => "Twitter / " + name }><= name
+  's setting
+
+- form_for @user do |f|
+  = f.label      :notifo_username
+  \:
+  = f.text_field :notifo_username
+  = f.submit :save
