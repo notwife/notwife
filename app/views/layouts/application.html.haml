@@ -10,7 +10,7 @@
     %div#wrapper
       %div#header
         %h1
-          = link_to("Notwife", { :controller => "common", :action => "top" }, { :title => "Notwife" })
+          = link_to("Notwife", root_path, { :title => "Notwife" })
           %span is not your wife.
       %div#main
         = yield

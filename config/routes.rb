@@ -2,10 +2,11 @@ Notwife::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
-  match '/auth/:provider/callback', :to => 'sessions#create'
+  root :to => 'common#top'
 
-  match '/',          :to => 'common#top'
   match '/dashboard', :to => 'common#dashboard'
+
+  match '/auth/:provider/callback', :to => 'sessions#create'
 
   resources :users
 
