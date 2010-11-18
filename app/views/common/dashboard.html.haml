@@ -4,8 +4,13 @@
   %a{ :href => "http://twitter.com/" + name, :title => "Twitter / " + name }><= name
   's setting
 
-- form_for @user do |f|
+- form_for(@user) do |f|
   = f.label      :notifo_username
   \:
   = f.text_field :notifo_username
-  = f.submit :save
+  = f.submit '保存してSubscribeを開始する'
+
+- unless @user.notifo_username.blank?
+  - form_for(@user, :html => { :method => :post }) do |f|
+    = f.label  'subscribeできたら、試しに通知を送ってみましょう'
+    = f.submit '通知を送る'

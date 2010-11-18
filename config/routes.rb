@@ -4,11 +4,13 @@ Notwife::Application.routes.draw do
 
   root :to => 'common#top'
 
-  match '/dashboard', :to => 'common#dashboard'
+  get '/dashboard', :to => 'common#dashboard'
 
-  match '/auth/:provider/callback', :to => 'sessions#create'
+  get '/auth/:provider/callback', :to => 'sessions#create'
+  get '/auth/failure', :to => 'common#top'
 
-  resources :users
+  put  '/users/:id', :to => 'users#update', :as => 'user'
+  post '/users/:id', :to => 'users#sample'
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

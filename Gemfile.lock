@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/phsr/notifo
+  revision: 0b59330f0907061d85338d21dd1d73cec12f9712
+  specs:
+    notifo (0.1.2)
+      httparty (~> 0.4.5)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -35,6 +42,7 @@ GEM
     builder (2.1.2)
     configatron (2.6.4)
       yamler (>= 0.1.0)
+    crack (0.1.8)
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
@@ -49,6 +57,8 @@ GEM
       activesupport (~> 3.0)
       haml (~> 3.0)
       railties (~> 3.0)
+    httparty (0.4.5)
+      crack (>= 0.1.1)
     i18n (0.4.2)
     jquery-rails (0.2.5)
       rails (~> 3.0)
@@ -157,6 +167,7 @@ DEPENDENCIES
   haml
   haml-rails
   jquery-rails
+  notifo (>= 0.1.2)!
   omniauth
   rails (= 3.0.0)
   rspec-rails (>= 2.0.0.beta.20)
