@@ -19,7 +19,7 @@
             %a{ :href => 'http://twitter.com/' + name, :title => 'Twitter / ' + name }><= name
             ,
             - succeed(",") do
-              != link_to('Dashbaord', dashboard_path, { :title => 'Dashboard' })
+              != link_to('Dashboard', dashboard_path, { :title => 'Dashboard' })
             = link_to('Sign out', sign_out_path, { :title => 'Sign out' })
           - else
             %a#sign-in-with-twitter{ :href => '/auth/twitter', :title => 'Sign in with Twitter' }
