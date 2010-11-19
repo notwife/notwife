@@ -9,7 +9,11 @@ class ApplicationController < ActionController::Base
     !!current_user
   end
 
-  helper_method :current_user, :signed_in?
+  def sign_out!
+    session.delete :user_id
+  end
+
+  helper_method :current_user, :signed_in?, :sign_out!
 
   def current_user=(user)
     @current_user = user

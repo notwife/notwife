@@ -31,6 +31,9 @@ form {
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px; }
 
+#header {
+  position: relative; }
+
 #header h1 a {
   color: #000;
   font-size: 120%;
@@ -43,6 +46,15 @@ form {
 #header h1 span {
   font-size: 60%;
   font-weight: normal; }
+
+#navigation {
+  font-size: 90%;
+  position: absolute;
+  bottom: 20px;
+  right: 20px; }
+
+#navigation img {
+  vertical-align: bottom; }
 
 #credit {
   font-size: 90%; }

@@ -1,10 +1,2 @@
-- if @user
-  - name = @user.twitter_screen_name
-  Hi, @
-  %a{ :href => 'http://twitter.com/' + name, :title => 'Twitter / ' + name }><= name
-  \! Please check your
-  - succeed("!") do
-    != link_to('Dashbaord', { :controller => 'common', :action => 'dashboard' }, { :title => 'Dashboard' })
-- else
-  %a#sign-in-with-twitter{ :href => '/auth/twitter', :title => 'Sign in with Twitter' }
-    = image_tag 'sign-in-with-twitter-l.png', :alt => 'Sign in with Twitter'
+%h3 たとえば、Twitterの「Favされた！」をリアルタイムにプッシュでお届け。
+%p ──Notwifeは、ちょっと気の利いたアプリケーションです。だけど、あなたの嫁ではありません。

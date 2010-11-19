@@ -8,6 +8,7 @@ Notwife::Application.routes.draw do
 
   get '/auth/:provider/callback', :to => 'sessions#create'
   get '/auth/failure', :to => 'common#top'
+  get '/sign_out', :to => 'sessions#destroy'
 
   put  '/users/:id', :to => 'users#update', :as => 'user'
   post '/users/:id', :to => 'users#sample'

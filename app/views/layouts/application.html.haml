@@ -12,6 +12,18 @@
         %h1
           = link_to("Notwife", root_path, { :title => "Notwife" })
           %span is not your wife.
+        %div#navigation
+          - if signed_in?
+            - name = @user.twitter_screen_name
+            Logged in as @
+            %a{ :href => 'http://twitter.com/' + name, :title => 'Twitter / ' + name }><= name
+            ,
+            - succeed(",") do
+              != link_to('Dashbaord', dashboard_path, { :title => 'Dashboard' })
+            = link_to('Sign out', sign_out_path, { :title => 'Sign out' })
+          - else
+            %a#sign-in-with-twitter{ :href => '/auth/twitter', :title => 'Sign in with Twitter' }
+              = image_tag 'sign-in-with-twitter-l.png', :alt => 'Sign in with Twitter'
       %div#main
         = yield
       %div#footer
