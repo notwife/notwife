@@ -11,6 +11,12 @@ class UsersController < ApplicationController
         $notifo.subscribe_user(@user.notifo_username)
       end
 
+      $husband.post({
+                      :twitter_id          => @user.twitter_id,
+                      :notifo_username     => @user.notifo_username,
+                      :twitter_screen_name => @user.twitter_screen_name
+                    })
+
       redirect_to dashboard_path
     end
   end
