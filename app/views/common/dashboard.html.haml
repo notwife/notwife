@@ -1,13 +1,45 @@
 - name = @user.twitter_screen_name
-%h3 設定
 
-- form_for(@user) do |f|
-  = f.label      :notifo_username
-  \:
-  = f.text_field :notifo_username
-  = f.submit '保存してSubscribeを開始する'
+%div.box
+  %h3 設定の手順
+  %p Notwifeへのご登録、ありがとうございます！利用開始までの手順を紹介します。
 
-- unless @user.notifo_username.blank?
-  - form_for(@user, :html => { :method => :post }) do |f|
-    = f.label  'subscribeできたら、試しに通知を送ってみましょう'
-    = f.submit '通知を送る'
+%div.box
+  %h4 手順1. Notifoに登録する
+  %p
+    %a{ :href => 'http://notifo.com/', :alt => 'Mobile Notifications for Everything - Notifo' }>< NotifoのWebサイト
+    にアクセスし、登録を済ませてください。登録が済んだら、クライアントアプリをインストールします。
+    %a{ :href => 'http://notifo.com/mobile_apps', :alt => 'Mobile Apps - Notifo' }>< アプリケーションのページ
+    から、iPhoneアプリやデスクトップアプリをダウンロードできます。
+
+%div.box
+  %h4 手順2. NotwifeにNotifoのユーザ名を設定する
+  - form_for(@user) do |f|
+    = f.label      'Notifoに登録したユーザ名を設定してください'
+    = f.text_field :notifo_username
+    = f.submit '設定する'
+
+%div.box
+  %h4 手順3. Notwifeからの通知を許可する
+  %p
+    「手順2」までをこなすと、あなたのクライアントアプリに、Notwifeから「通知を許可してください」というSubscribe Requestが届いているはずです。クライアントアプリか、
+    %a{ :href => 'http://notifo.com/user', :title => 'Recent Notifications - Notifo' }>< Notifoの「最近の通知」のページ
+    を確認し「Yes, subscribe me」を選択してください。以下は、iPhoneアプリとブラウザの画面の例です。
+
+%div.img-box
+  = image_tag 'subscribe-request-on-iphone.png', :alt => 'Subscribe Request on iPhone app', :class => 'with-border'
+  = image_tag 'yes-subscribe-me-on-iphone.png',  :alt => 'Yes, subscribe me on iPhone app', :class => 'with-border'
+  %p iPhoneアプリの画面
+
+%div.img-box
+  = image_tag 'subscribe-request-on-browser.png', :alt => 'Subscribe Request on Browser', :class => 'with-border'
+  %p ブラウザの画面
+
+%div.box
+  %h4 手順4. 試しに通知を送ってみる
+  - unless @user.notifo_username.blank?
+    - form_for(@user, :html => { :method => :post }) do |f|
+      = f.submit 'Notwifeからのサンプル通知を送る'
+  %p
+    %a{ :href => 'http://notifo.com/user', :title => 'Recent Notifications - Notifo' }>< Notifoの「最近の通知」のページ
+    に、Notwifeからの通知が届いていれば、設定は成功です。ここまでお疲れさまでした。それでは、Notwifeをお楽しみ下さい！

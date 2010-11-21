@@ -8,6 +8,9 @@ body {
 img {
   border: none; }
 
+img.with-border {
+  border: 1px solid #999; }
+
 form {
   padding: 10px; }
 
