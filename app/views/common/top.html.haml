@@ -13,11 +13,12 @@
     %a{ :href => 'http://notifo.com/', :alt => 'Mobile Notifications for Everything - Notifo'}>< Notifo
     を通してお届けします。Notifoのアカウントを用意するだけで、すぐに利用を開始できます。
 
-%div.box
-  %h3 Notwifeを使ってみる
-%div.img-box
-  %a#sign-in-with-twitter{ :href => '/auth/twitter', :title => 'Sign in with Twitter' }
-    = image_tag 'sign-in-with-twitter-l.png', :alt => 'Sign in with Twitter'
+- unless @user
+  %div.box
+    %h3 Notwifeを使ってみる
+  %div.img-box
+    %a#sign-in-with-twitter{ :href => '/auth/twitter', :title => 'Sign in with Twitter' }
+      = image_tag 'sign-in-with-twitter-l.png', :alt => 'Sign in with Twitter'
 
 %div.box
   %h3 サービスの運用について
