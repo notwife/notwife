@@ -1,8 +1,5 @@
 - name = @user.twitter_screen_name
-%h3
-  Edit @
-  %a{ :href => "http://twitter.com/" + name, :title => "Twitter / " + name }><= name
-  's setting
+%h3 設定
 
 - form_for(@user) do |f|
   = f.label      :notifo_username

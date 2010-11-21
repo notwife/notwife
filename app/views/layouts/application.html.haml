@@ -15,9 +15,9 @@
         %div#navigation
           - if signed_in?
             - name = @user.twitter_screen_name
-            Logged in as @
-            %a{ :href => 'http://twitter.com/' + name, :title => 'Twitter / ' + name }><= name
-            ,
+            Signed in as
+            - succeed(",") do
+              %a{ :href => 'http://twitter.com/' + name, :title => 'Twitter / ' + name }= '@' + name
             - succeed(",") do
               != link_to('Dashboard', dashboard_path, { :title => 'Dashboard' })
             = link_to('Sign out', sign_out_path, { :title => 'Sign out' })

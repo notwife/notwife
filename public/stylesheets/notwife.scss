@@ -15,10 +15,19 @@ form {
   padding: 10px;
 }
 
+a {
+  color: #348BD9;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 #wrapper {
   width: 800px;
   margin: auto;
-  padding: 20px;
+  padding: 5px 20px;
   background: -webkit-gradient(linear, left top, left bottom, from(#666), to(#000));
   background-repeat: no-repeat;
 }
@@ -45,12 +54,7 @@ form {
 #header h1 a {
   color: #000;
   font-size: 120%;
-  text-decoration: none;
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
-}
-
-#header h1 a:hover {
-  text-decoration: underline;
 }
 
 #header h1 span {
@@ -73,4 +77,12 @@ form {
 
 #credit {
   font-size: 90%;
+}
+
+.box, .img-box {
+  padding: 10px 0;
+}
+
+.img-box {
+  text-align: center;
 }
