@@ -42,6 +42,9 @@ a:hover {
   border-bottom-right-radius: 10px; }
 
 #header {
+  padding: 20px;
+  background-image: url("/images/logo.120x120.png");
+  background-repeat: no-repeat;
   position: relative; }
 
 #header h1 a {
@@ -56,7 +59,7 @@ a:hover {
 #navigation {
   font-size: 90%;
   position: absolute;
-  bottom: 20px;
+  bottom: 30px;
   right: 20px; }
 
 #navigation img {
