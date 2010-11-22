@@ -19,8 +19,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     redirect_to root_path unless @user == current_user
 
-    title = "どうも、Notwifeです！"
-    text  = "このメッセージが届いていたら、設定は成功しています！"
+    title = "information"
+    text  = "Success!"
     $notifo.post(@user.notifo_username, text, title)
 
     parameters = {
