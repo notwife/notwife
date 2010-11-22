@@ -14,7 +14,7 @@
 
 %div.box
   %h4 手順2. NotwifeにNotifoのユーザ名を設定する
-  - form_for(@user) do |f|
+  = form_for(@user) do |f|
     = f.label      'Notifoに登録したユーザ名を設定してください'
     = f.text_field :notifo_username
     = f.submit '設定する'
@@ -38,7 +38,7 @@
 %div.box
   %h4 手順4. 試しに通知を送ってみる
   - unless @user.notifo_username.blank?
-    - form_for(@user, :html => { :method => :post }) do |f|
+    = form_for(@user, :html => { :method => :post }) do |f|
       = f.submit 'Notwifeからのサンプル通知を送る'
   %p
     %a{ :href => 'http://notifo.com/user', :title => 'Recent Notifications - Notifo' }>< Notifoの「最近の通知」のページ
