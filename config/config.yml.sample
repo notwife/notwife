@@ -2,6 +2,12 @@ development: &local
   twitter:
     consumer_key: twitter_consumer_key
     consumer_secret:  twitter_consumer_secret
+  notifo:
+    username: notifo_username
+    secret: notifo_secret
+  husband:
+    url: husband_url
+    keyword: husband_keyword
 
 production:
 

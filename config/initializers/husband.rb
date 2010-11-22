@@ -1,9 +1,7 @@
 require 'restclient'
 
 url     = configatron.husband.url
-url     = url.blank? ? ENV['HUSBAND_URL'] : url
 keyword = configatron.husband.keyword
-keyword = keyword.blank? ? ENV['HUSBAND_KEYWORD'] : keyword
 
 unless !url.nil? && !keyword.nil?
   raise 'husband settings is not found. Add config/config.yml OR ENV["HUSBAND_URL"] and ENV["HASBAND_KEYWORD"]'
