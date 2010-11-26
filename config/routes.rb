@@ -4,7 +4,8 @@ Notwife::Application.routes.draw do
 
   root :to => 'common#top'
 
-  get '/dashboard', :to => 'common#dashboard'
+  get '/dashboard',   :to => 'common#dashboard'
+  get '/information', :to => 'common#information'
 
   get '/auth/:provider/callback', :to => 'sessions#create'
   get '/auth/failure', :to => 'common#top'

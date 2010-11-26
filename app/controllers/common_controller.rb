@@ -12,4 +12,10 @@ class CommonController < ApplicationController
 
     @user = current_user
   end
+
+  def information
+    @title = "Information - Notwife"
+
+    @user = current_user
+  end
 end

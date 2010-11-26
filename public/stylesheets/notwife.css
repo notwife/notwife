@@ -73,3 +73,6 @@ a:hover {
 
 .img-box {
   text-align: center; }
+
+.box p {
+  padding: 3px 0; }
