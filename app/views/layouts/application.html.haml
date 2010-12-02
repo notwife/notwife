@@ -14,7 +14,7 @@
           %span is not your wife.
         %div#navigation
           - if signed_in?
-            - name = @user.twitter_screen_name
+            - name = current_user.twitter_screen_name
             Signed in as
             = succeed(",") do
               %a{ :href => 'http://twitter.com/' + name, :title => 'Twitter / ' + name }= '@' + name

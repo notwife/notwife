@@ -13,7 +13,7 @@
     %a{ :href => 'http://notifo.com/', :alt => 'Mobile Notifications for Everything - Notifo'}>< Notifo
     を通してお届けします。Notifoのアカウントを用意するだけで、すぐに利用を開始できます。
 
-- unless @user
+- unless signed_in?
   %div.box
     %h3 Notwifeを使ってみる
   %div.img-box
