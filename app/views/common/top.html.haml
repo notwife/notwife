@@ -30,7 +30,8 @@
   %p
     NotwifeはTwitterのOAuthを利用します。信用します、という方だけご利用ください。サービスの運用レベルは「がんばります」(ベストエフォート)です。
 
+%div.box
+  %h3 Notwifeについての詳細
   %p
-    Notwifeに対するご意見等は
-    %a{ :href => 'http://twitter.com/notwife', :alt => 'Twitter / notwife'}>< @notwife
-    までお願いします。不明な点などあれば、お気軽にお声掛けください。
+    = succeed("をご覧ください。") do
+      != link_to 'About Notwife', about_path
