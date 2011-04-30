@@ -3,7 +3,10 @@
   %p ──Notwifeは、ちょっと気の利いたアプリです。だけど、あなたの嫁ではありません。
 
 %div.img-box
-  = image_tag 'abstract.png', :alt => 'Abstract'
+  - if is_smartphone_layout? == "smt"
+    = image_tag 'abstract.png', :alt => 'Abstract', :size => '300x180'
+  - else
+    = image_tag 'abstract.png', :alt => 'Abstract'
 
 %div.box
   %p
@@ -22,8 +25,9 @@
 
 %div.box
   %h3 運営からのお知らせ
-  %p
-    = link_to 'Notwifeの結婚相手募集終了のお知らせ (2011年4月2日)', information_path
+  %ul
+    %li
+      = link_to 'Notwifeの結婚相手募集終了のお知らせ (2011年4月2日)', information_path
 
 %div.box
   %h3 サービスの運用について

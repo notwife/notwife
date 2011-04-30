@@ -1,4 +1,6 @@
 class CommonController < ApplicationController
+  layout :is_smartphone_layout?
+
   def top
     @title = "Notwife is not your wife."
   end
