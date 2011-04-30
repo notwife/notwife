@@ -24,6 +24,8 @@ class ApplicationController < ActionController::Base
     format = params[:format] || ""
     if format == "smartphone" || request.user_agent =~ /(iPhone|Android)/
       "smt"
+    else
+      "application"
     end
   end
 end
