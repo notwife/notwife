@@ -1,0 +1,29 @@
+!!! 5
+%html{ :lang => "ja" }
+  %head
+    %title= @title
+    %meta{ :charset => "UTF-8" }
+    = stylesheet_link_tag 'notwife_smt'
+    = javascript_include_tag(:defaults)
+    = csrf_meta_tag
+    %meta{ :name => "viewport", :content => "width=320, user-scalable=no, maximum-scale=2.0, minimum-scale=1.0"}
+
+  %body
+    %div#wrapper
+      %div#header
+        %h1
+          = link_to(image_tag("logo.32x32.png") , root_path)
+          = link_to("Notwife", root_path, { :title => "Notwife" })
+          %span is not your wife.
+      %div#main
+        = yield
+      %div#footer
+        %p#credit
+          = "Powered by Ruby %s and Rails %s, Made by" % [RUBY_VERSION, Rails.version]
+          %br/
+          %a{ :href => "http://twitter.com/kei_s",  :title => "kei-s (kei_s) on Twitter"       } @kei_s
+          and
+          = succeed(",") do
+            %a{ :href => "http://twitter.com/june29", :title => "Jun OHWADA (june29) on Twitter" } @june29
+          For more detail
+          = link_to 'About Notwife', about_path

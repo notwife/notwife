@@ -13,10 +13,19 @@ class ApplicationController < ActionController::Base
     session.delete :user_id
   end
 
-  helper_method :current_user, :signed_in?, :sign_out!
+  helper_method :current_user, :signed_in?, :sign_out!, :is_smartphone_layout?
 
   def current_user=(user)
     @current_user = user
     session[:user_id] = user.id
+  end
+
+  def is_smartphone_layout?
+    format = params[:format] || ""
+    if format == "smartphone" || request.user_agent =~ /(iPhone|Android)/
+      "smt"
+    else
+      "application"
+    end
   end
 end
