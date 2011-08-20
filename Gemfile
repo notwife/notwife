@@ -41,6 +41,7 @@ group :development, :test do
   gem 'heroku'
   gem 'rspec-rails','>=2.0.0.beta.20'
   gem 'autotest'
+  gem 'ZenTest','=4.6.0'
   gem 'fabrication'
   gem 'webrat'
 end
